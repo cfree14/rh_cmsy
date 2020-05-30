@@ -29,8 +29,20 @@ Free, C.M., Jensen, O.P. (2020) Robin Hood cMSY: using catch data and borrowed i
 ## Key references
 
 
+Free, C.M., Thorson, J.T., Pinsky, M.L., Oken, K.L., Wiedenmann, J., Jensen, O.P. (2019) Impacts of historical warming on marine fisheries production. Science 363(6430): 979-983.
 
+Froese, R., Demirel, N., Coro, G., Kleisner, K.M., Winker, H. (2017) Estimating fisheries reference points from catch and resilience. Fish and Fisheries 18(3): 506–526. 
 
+Froese, R., Pauly, D. (2018) FishBase. Available at: www.fishbase.org.
 
+Martell, S., Froese, R. (2013) A simple method for estimating MSY from catch and resilience. Fish and Fisheries 14: 504–514.
 
+Myers, R. A., Bridson, J., Barrowman, N. J. (1995) Summary of worldwide spawner and recruitment data. 2024. St. Johns, Newfoundland: Department of Fisheries and Oceans Canada, Northwest Atlantic Fisheries Centre.
 
+Neubauer, P., Jensen, O.P., Hutchings, J.A., Baum, J.K. (2013) Resilience and recovery of overexploited marine populations. Science 340(6130: 347-349.
+
+Ricard, D., C. Minto, O.P. Jensen, Baum, J.K. (2012) Examining the knowledge base and status of commercially exploited marine species with the RAM Legacy Stock Assessment Database. Fish and Fisheries 13(4): 380–398.
+
+Thorson, J.T. (2019) Predicting recruitment density dependence and intrinsic growth rate for all fishes worldwide using a data‐integrated life‐history model. Fish and Fisheries.
+
+Thorson, J.T., Munch, S.B., Cope, J.M., Gao, J. (2017) Predicting life history parameters for all fishes worldwide. Ecological Applications 27(8): 2262-2276.
