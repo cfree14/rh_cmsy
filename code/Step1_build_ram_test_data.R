@@ -9,7 +9,10 @@ rm(list = ls())
 library(plyr)
 library(dplyr)
 library(reshape2)
+<<<<<<< HEAD
 library(datalimited2)
+=======
+>>>>>>> b000ee230b68cb93da265e6daf169dadc732c35a
 
 # Directories
 datadir <- "data"
@@ -83,16 +86,25 @@ data_1st <- timeseries_values_views %>%
   # Stocks of interest
   filter(stockid %in% stats$stockid) %>%
   # Columns of interest
+<<<<<<< HEAD
   select(stockid, year, TC, TL, TBdivTBmsy, SSBdivSSBmsy, ERdivERmsy, FdivFmsy) %>% 
   rename(tc=TC, tl=TL, bbmsy_tb=TBdivTBmsy, bbmsy_ssb=SSBdivSSBmsy, 
          uumsy=ERdivERmsy, ffmsy=FdivFmsy) %>% 
+=======
+  select(stockid, year, TC, TL, TBdivTBmsy, SSBdivSSBmsy) %>% 
+  rename(tc=TC, tl=TL, bbmsy_tb=TBdivTBmsy, bbmsy_ssb=SSBdivSSBmsy) %>% 
+>>>>>>> b000ee230b68cb93da265e6daf169dadc732c35a
   # Add catch and B/BMSY to use
   left_join(select(stats, stockid, catch_use, bbmsy_use), by="stockid") %>% 
   # Create columns for catch and B/BMSY to use
   mutate(catch=ifelse(catch_use=="TC", tc, tl),
          bbmsy=ifelse(catch_use=="TB", bbmsy_tb, bbmsy_ssb)) %>% 
   # Reduce data
+<<<<<<< HEAD
   select(stockid, year, catch, bbmsy, uumsy, ffmsy) %>% 
+=======
+  select(stockid, year, catch, bbmsy) %>% 
+>>>>>>> b000ee230b68cb93da265e6daf169dadc732c35a
   filter(!is.na(catch)) %>% 
   # Trim years...
   group_by(stockid) %>% 
@@ -117,16 +129,22 @@ sum(check$gaps) # must be 0
 # Build final data
 ################################################################################
 
+<<<<<<< HEAD
 # Near final data
 ###########################
 
+=======
+>>>>>>> b000ee230b68cb93da265e6daf169dadc732c35a
 # Data - second pass
 data_2nd <- data_1st %>% 
   filter(stockid %in% check$stockid)
 
+<<<<<<< HEAD
 # Stock key
 ###########################
 
+=======
+>>>>>>> b000ee230b68cb93da265e6daf169dadc732c35a
 # Final stock key
 stocks <- data_2nd %>%
   summarize(nyr=n(),
@@ -142,6 +160,7 @@ stocks <- data_2nd %>%
   # Remove stocks with high final B/BMSY - not fair to test RH-cMSY on these
   filter(bbmsy_final<=4)
   
+<<<<<<< HEAD
 # Get resilience
 spp <- sort(unique(stocks1$species))
 res <- datalimited2::resilience(spp)
@@ -182,11 +201,14 @@ stocks$resilience[stocks$species=="Placopecten magellanicus"] <- "Medium" # Atl.
 stocks$resilience[stocks$species=="Spisula solidissima"] <- "Medium" # Atlantic surf clam: mod vulnerability (37/100) = mod resilience
 sort(unique(stocks$species[is.na(stocks$resilience)]))
 
+=======
+>>>>>>> b000ee230b68cb93da265e6daf169dadc732c35a
 # Final year B/BMSY distribution
 hist(stocks$bbmsy_final, breaks=seq(0,13,0.25), las=1, 
      xlim=c(0,4), ylim=c(0,40), xlab="B/BMSY", main="", col="grey60", border=F)
 
 # Final data
+<<<<<<< HEAD
 ###########################
 
 # Final data
@@ -199,6 +221,11 @@ freeR::complete(stocks)
 
 data <- data_2nd %>% 
   filter(stockid %in% stocks$stockid)
+=======
+data <- data_2nd %>% 
+  filter(stockid %in% stocks$stockid)
+
+>>>>>>> b000ee230b68cb93da265e6daf169dadc732c35a
 
 # Export data
 ################################################################################
