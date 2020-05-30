@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+output/
+figures/
+drafts/
+code/functions/Return.Rdata
